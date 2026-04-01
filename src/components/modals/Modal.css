@@ -1,0 +1,194 @@
+/* ================= PURPLE ROYALTY - MODAL STYLES ================= */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modal-container {
+  background: #2D1B3D;
+  border: 3px solid #6A0DAD;
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 10px 40px rgba(106, 13, 173, 0.6);
+  position: relative;
+  animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  color: #B0B0B0;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.modal-close:hover {
+  background: rgba(244, 67, 54, 0.2);
+  color: #F44336;
+  transform: rotate(90deg);
+}
+
+.modal-container h3 {
+  color: #FFD700;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-title {
+  color: #FFD700;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.modal-title.success {
+  color: #27AE60;
+}
+
+.modal-title.error {
+  color: #F44336;
+}
+
+.modal-title.info {
+  color: #2196F3;
+}
+
+.modal-body {
+  margin-bottom: 25px;
+}
+
+.modal-body p {
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 12px 24px;
+  background: transparent;
+  border: 2px solid #F44336;
+  border-radius: 8px;
+  color: #F44336;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #F44336;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-confirm {
+  flex: 1;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #6A0DAD, #9B59B6);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  color: #FFD700;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(106, 13, 173, 0.4);
+}
+
+.btn-confirm:hover {
+  background: linear-gradient(135deg, #9B59B6, #6A0DAD);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(106, 13, 173, 0.6);
+}
+
+/* SUCCESS/ERROR/INFO SPECIFIC BUTTONS */
+.modal-title.success ~ .modal-body ~ .modal-actions .btn-confirm {
+  background: linear-gradient(135deg, #27AE60, #229954);
+  border-color: #FFD700;
+}
+
+.modal-title.success ~ .modal-body ~ .modal-actions .btn-confirm:hover {
+  background: linear-gradient(135deg, #229954, #27AE60);
+}
+
+.modal-title.error ~ .modal-body ~ .modal-actions .btn-confirm {
+  background: linear-gradient(135deg, #F44336, #D32F2F);
+  border-color: #FFD700;
+  color: #FFFFFF;
+}
+
+.modal-title.error ~ .modal-body ~ .modal-actions .btn-confirm:hover {
+  background: linear-gradient(135deg, #D32F2F, #F44336);
+}
+
+.modal-title.info ~ .modal-body ~ .modal-actions .btn-confirm {
+  background: linear-gradient(135deg, #2196F3, #1976D2);
+  border-color: #FFD700;
+}
+
+.modal-title.info ~ .modal-body ~ .modal-actions .btn-confirm:hover {
+  background: linear-gradient(135deg, #1976D2, #2196F3);
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .modal-container {
+    padding: 25px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-confirm {
+    width: 100%;
+  }
+}

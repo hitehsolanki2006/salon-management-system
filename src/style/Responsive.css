@@ -1,0 +1,491 @@
+/* ==================== GLOBAL RESPONSIVE STYLES ==================== */
+
+/* Base responsive utilities */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==================== BREAKPOINTS ==================== */
+/* Desktop: > 1200px */
+/* Tablet: 768px - 1200px */
+/* Mobile: < 768px */
+/* Small Mobile: < 480px */
+
+/* ==================== DESKTOP (1200px+) ==================== */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== TABLET (768px - 1200px) ==================== */
+@media (max-width: 1200px) {
+  /* General containers */
+  .container {
+    padding: 0 30px;
+  }
+  
+  /* Grid layouts */
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Font sizes */
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+  
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Padding adjustments */
+  .page-container {
+    padding: 20px;
+  }
+  
+  /* Button groups */
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .button-group button {
+    width: 100%;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 20px;
+  }
+  
+  /* Tables */
+  table {
+    font-size: 0.9rem;
+  }
+}
+
+/* ==================== MOBILE (< 768px) ==================== */
+@media (max-width: 768px) {
+  /* General containers */
+  .container {
+    padding: 0 15px;
+  }
+  
+  .page-container {
+    padding: 15px;
+    padding-top: calc(15px + 74px);
+  }
+  
+  /* Grid layouts - all single column */
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  /* Font sizes */
+  h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+  }
+  
+  p {
+    font-size: 0.95rem;
+  }
+  
+  /* Buttons */
+  button,
+  .btn {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+    width: 100%;
+  }
+  
+  .btn-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .btn-group button {
+    width: 100%;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+  
+  /* Forms */
+  input,
+  textarea,
+  select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    width: 100%;
+  }
+  
+  /* Tables - make scrollable */
+  .table-container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  table {
+    min-width: 600px;
+    font-size: 0.85rem;
+  }
+  
+  /* Modals */
+  .modal {
+    width: 95%;
+    max-width: none;
+    margin: 10px;
+  }
+  
+  /* Navigation */
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Stats/Analytics cards */
+  .stat-card {
+    padding: 15px;
+  }
+  
+  .stat-icon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.3rem;
+  }
+  
+  .stat-value {
+    font-size: 1.6rem;
+  }
+  
+  .stat-label {
+    font-size: 0.8rem;
+  }
+  
+  /* Charts */
+  .chart-container {
+    height: 250px;
+  }
+  
+  /* Spacing */
+  .section {
+    margin-bottom: 30px;
+  }
+  
+  .gap-lg {
+    gap: 15px;
+  }
+  
+  .gap-md {
+    gap: 10px;
+  }
+  
+  /* Hide on mobile */
+  .hide-mobile {
+    display: none !important;
+  }
+  
+  /* Show only on mobile */
+  .show-mobile {
+    display: block !important;
+  }
+}
+
+/* ==================== SMALL MOBILE (< 480px) ==================== */
+@media (max-width: 480px) {
+  /* Containers */
+  .container {
+    padding: 0 10px;
+  }
+  
+  .page-container {
+    padding: 10px;
+    padding-top: calc(10px + 74px);
+  }
+  
+  /* Font sizes */
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  h2 {
+    font-size: 1.3rem;
+  }
+  
+  h3 {
+    font-size: 1.1rem;
+  }
+  
+  h4 {
+    font-size: 1rem;
+  }
+  
+  p {
+    font-size: 0.9rem;
+  }
+  
+  /* Buttons */
+  button,
+  .btn {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+  }
+  
+  /* Cards */
+  .card {
+    padding: 12px;
+  }
+  
+  /* Forms */
+  input,
+  textarea,
+  select {
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  label {
+    font-size: 0.85rem;
+  }
+  
+  /* Stats cards */
+  .stat-card {
+    padding: 12px;
+    gap: 10px;
+  }
+  
+  .stat-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .stat-value {
+    font-size: 1.4rem;
+  }
+  
+  .stat-label {
+    font-size: 0.75rem;
+  }
+  
+  /* Charts */
+  .chart-container {
+    height: 200px;
+  }
+  
+  /* Spacing */
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  /* Modals */
+  .modal {
+    width: 100%;
+    margin: 5px;
+    padding: 20px;
+  }
+  
+  /* Tables */
+  table {
+    font-size: 0.8rem;
+  }
+  
+  th,
+  td {
+    padding: 8px 5px;
+  }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+/* Flexbox utilities */
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.align-center {
+  align-items: center;
+}
+
+/* Grid utilities */
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Spacing utilities */
+.gap-sm {
+  gap: 8px;
+}
+
+.gap-md {
+  gap: 15px;
+}
+
+.gap-lg {
+  gap: 25px;
+}
+
+.p-sm {
+  padding: 10px;
+}
+
+.p-md {
+  padding: 20px;
+}
+
+.p-lg {
+  padding: 30px;
+}
+
+.m-sm {
+  margin: 10px;
+}
+
+.m-md {
+  margin: 20px;
+}
+
+.m-lg {
+  margin: 30px;
+}
+
+/* Text utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+/* Width utilities */
+.w-full {
+  width: 100%;
+}
+
+.w-auto {
+  width: auto;
+}
+
+/* Display utilities */
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Touch-friendly */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase touch targets */
+  button,
+  a,
+  input[type="checkbox"],
+  input[type="radio"] {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on touch devices */
+  *:hover {
+    transition: none;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .page-container {
+    padding: 0;
+  }
+  
+  * {
+    background: white !important;
+    color: black !important;
+  }
+}

@@ -1,0 +1,283 @@
+/* ================= PURPLE ROYALTY - RESCHEDULE REQUEST ================= */
+
+.btn-reschedule-toggle {
+  background: linear-gradient(135deg, #E74C3C, #C0392B);
+  color: #FFD700;
+  border: 2px solid #FFD700;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-reschedule-toggle:hover {
+  background: linear-gradient(135deg, #C0392B, #E74C3C);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.5);
+}
+
+.reschedule-form {
+  background: #1C1C1C;
+  border: 2px solid #6A0DAD;
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 15px;
+  box-shadow: 0 8px 32px rgba(106, 13, 173, 0.3);
+}
+
+.reschedule-title {
+  color: #FFD700;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+  text-align: center;
+  border-bottom: 2px solid #6A0DAD;
+  padding-bottom: 10px;
+}
+
+.reschedule-subtitle {
+  color: #9B59B6;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0 15px 0;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  color: #9B59B6;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+/* DATETIME PICKER */
+.datetime-picker-input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #2D1B3D;
+  border: 2px solid #6A0DAD;
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.datetime-picker-input:focus {
+  outline: none;
+  border-color: #9B59B6;
+  box-shadow: 0 0 0 3px rgba(106, 13, 173, 0.2);
+}
+
+.datetime-picker-input::placeholder {
+  color: #666;
+  font-style: italic;
+}
+
+/* React DatePicker Custom Styling */
+.react-datepicker {
+  background: #2D1B3D !important;
+  border: 2px solid #6A0DAD !important;
+  border-radius: 12px !important;
+  font-family: inherit !important;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.react-datepicker__header {
+  background: #1C1C1C !important;
+  border-bottom: 2px solid #6A0DAD !important;
+  border-radius: 12px 12px 0 0 !important;
+  padding-top: 12px !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker__day-name {
+  color: #FFD700 !important;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+}
+
+.react-datepicker__day-name {
+  color: #9B59B6 !important;
+  font-size: 0.85rem !important;
+}
+
+.react-datepicker__day {
+  color: #FFFFFF !important;
+  border-radius: 6px !important;
+  margin: 2px !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-datepicker__day:hover {
+  background: rgba(106, 13, 173, 0.4) !important;
+  border-radius: 6px !important;
+  transform: scale(1.1);
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--keyboard-selected {
+  background: linear-gradient(135deg, #6A0DAD, #9B59B6) !important;
+  color: #FFD700 !important;
+  border-radius: 6px !important;
+  font-weight: 700 !important;
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.5) !important;
+}
+
+.react-datepicker__day--today {
+  border: 2px solid #FFD700 !important;
+  font-weight: 700 !important;
+}
+
+.react-datepicker__day--disabled {
+  color: #555 !important;
+  opacity: 0.4 !important;
+  cursor: not-allowed !important;
+}
+
+.react-datepicker__time-container {
+  border-left: 2px solid #6A0DAD !important;
+}
+
+.react-datepicker__time {
+  background: #2D1B3D !important;
+}
+
+.react-datepicker__time-box {
+  border-radius: 0 0 12px 0 !important;
+}
+
+.react-datepicker__time-list-item {
+  color: #FFFFFF !important;
+  transition: all 0.2s ease !important;
+}
+
+.react-datepicker__time-list-item:hover {
+  background: rgba(106, 13, 173, 0.4) !important;
+}
+
+.react-datepicker__time-list-item--selected {
+  background: linear-gradient(135deg, #6A0DAD, #9B59B6) !important;
+  color: #FFD700 !important;
+  font-weight: 700 !important;
+}
+
+.react-datepicker__navigation-icon::before {
+  border-color: #FFD700 !important;
+}
+
+.react-datepicker__navigation:hover *::before {
+  border-color: #9B59B6 !important;
+}
+
+.react-datepicker__triangle {
+  border-bottom-color: #1C1C1C !important;
+}
+
+/* FORM ACTIONS */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-submit {
+  flex: 1;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #F39C12, #E67E22);
+  border: 2px solid #FFD700;
+  border-radius: 8px;
+  color: #1C1C1C;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.btn-submit:hover:not(:disabled) {
+  background: linear-gradient(135deg, #E67E22, #F39C12);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.5);
+}
+
+.btn-submit:disabled {
+  background: #2a2a2a;
+  border-color: #555;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.6;
+  box-shadow: none;
+  transform: none;
+}
+
+.btn-cancel {
+  flex: 1;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #E74C3C;
+  border-radius: 8px;
+  color: #E74C3C;
+  font-weight: 700;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: rgba(231, 76, 60, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+/* LOADING SPINNER */
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(28, 28, 28, 0.3);
+  border-top: 2px solid #1C1C1C;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+  .reschedule-form {
+    padding: 15px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .btn-submit,
+  .btn-cancel {
+    width: 100%;
+  }
+}
